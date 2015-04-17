@@ -17,6 +17,8 @@ public class Connect {
     public static void main(String[] args) {
         DBConnect connect=new DBConnect();
         connect.getData();
+        System.out.println("Test");
     }
+    
     
 }

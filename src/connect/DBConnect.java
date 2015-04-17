@@ -17,8 +17,6 @@ public class DBConnect {
 
     public DBConnect() {
         try {
-               // String URL = "jdbc:mysql://194.47.47.18:3306/YOUR_DATABASE_NAME?user=YOUR_USER_NAME&password=YOUR_PASSWORD";
-            // String URL = "jdbc:mysql://127.0.0.1:3306/company?user=root&password=root";
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/santaclaus?user=fred&password=barney");
             st = (Statement) con.createStatement();
@@ -34,6 +32,8 @@ public class DBConnect {
             while (rs.next()) {
                 String id = rs.getString("child_id");
                 String name = rs.getString("child_name");
+                
+                
                 String country = rs.getString("country");
                 System.out.println("ID: " + id + " Name: " + name + " Country: " + country + " Adress: ");
             }
